@@ -1,0 +1,36 @@
+{
+  "name": "simple-docker",
+  "version": "0.0.0",
+  "author": "Steve King <steve@mydev.co>",
+  "contributors": [
+    {
+      "name": "Steve King",
+      "email": "steve@mydev.co"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "generate": "tsc",
+    "preversion": "npm run clean && npm run generate",
+    "postversion": "npm publish && git push && git push --tags && npm run clean"
+  },
+  "keywords": [
+    "docker",
+    "simple"
+  ],
+  "files": [
+    "dist/**/*.*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "lodash": ">4.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.9.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.1"
+  }
+}

@@ -1,0 +1,9 @@
+
+.idea/
+node_modules/
+dist/
+
+*.log
+*.bak
+*.pid
+.DS_Store
